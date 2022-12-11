@@ -2,6 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { }
 
+
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) { }
@@ -14,6 +15,45 @@ function renderLicenseSection(license) { }
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ## Description
+  
+  ${data.description}
+  
+  ## Table of Contents
+  
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  
+  ## Installation
+  
+  ${data.installation}
+  
+  ## Usage
+  
+  ${data.usage}
+  
+  ## License
+  
+  ${data.license}
+  
+  ## Badges
+  
+  ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
+    
+  ## How to Contribute
+  
+  ${data.contributing}
+
+  ## Tests
+  
+  ${data.tests}
+
+  ## Contact
+
+  ${data.github}
+  ${data.email}
 `;
 }
 

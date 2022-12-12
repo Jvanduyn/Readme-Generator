@@ -13,7 +13,8 @@ function renderLicenseSection(license) { }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  # ${data.title}
 
   ## Description
   
@@ -36,11 +37,9 @@ function generateMarkdown(data) {
   
   ## License
   
-  ${data.license}
+  This project is licensed under ${data.license}.
   
   ## Badges
-  
-  ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
     
   ## How to Contribute
   
@@ -52,8 +51,8 @@ function generateMarkdown(data) {
 
   ## Contact
 
-  ${data.github}
-  ${data.email}
+  You can view my github at https://www.github.com/${data.github}.
+  You can email me at ${data.email}.
 `;
 }
 

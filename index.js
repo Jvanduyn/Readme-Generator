@@ -56,6 +56,7 @@ const promptUser = () => {
     ]);
 };
 
+//arrow function to generate the readme file using the users answers. READ me file will be called "usertitle".md
 const init = () => {
     promptUser()
         .then((answers) => fs.writeFileSync(answers.title + ".md", generateMarkdown(answers)))

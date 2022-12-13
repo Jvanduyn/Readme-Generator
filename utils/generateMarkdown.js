@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//function for the badges for the read me file
 function renderLicenseBadge(license) {
   if (license == "MIT") {
     return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
@@ -19,8 +18,7 @@ function renderLicenseBadge(license) {
 }
 
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//function creating a link for the license section
 function renderLicenseLink(license) {
   if (license == "MIT") {
     return "https://opensource.org/licenses/MIT"
@@ -39,27 +37,26 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+//function for the string for the readme section
 function renderLicenseSection(license) {
   if (license === "MIT") {
-    return "This project is licensed under ${data.license} ${renderLicenseLink(data.license)}."
+    return "This project is licensed under"
   }
   else if (license === "APACHE") {
-    return "This project is licensed under ${data.license} ${renderLicenseLink(data.license)}."
+    return "This project is licensed under"
   }
   else if (license === "GNU GPL") {
-    return "This project is licensed under ${data.license} ${renderLicenseLink(data.license)}."
+    return "This project is licensed under"
   }
   else if (license === "BSD") {
-    return "This project is licensed under ${data.license} ${renderLicenseLink(data.license)}."
+    return "This project is licensed under"
   }
   else {
     return ""
   }
 }
 
-//function for read me file template
+//function for template literal for the readme file
 function generateMarkdown(data) {
   return `
   # ${data.title}
@@ -70,12 +67,12 @@ function generateMarkdown(data) {
   
   ## Table of Contents
   
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [License](#License)
-  - [Contributing](#Contributing)
-  - [Tests](#Tests)
-  - [Contact](#Contact)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Contact](#contact)
   
   ## Installation
   
@@ -87,7 +84,7 @@ function generateMarkdown(data) {
   
   ## License
 
-  ${renderLicenseSection(data.license)}${renderLicenseLink(data.license)}
+  ${renderLicenseSection(data.license)}:${renderLicenseLink(data.license)}
   
   ## Badges
   ${renderLicenseBadge(data.license)}

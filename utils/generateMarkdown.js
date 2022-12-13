@@ -1,17 +1,17 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === [0]) {
-    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]"
+  if (license == "MIT") {
+    return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
   }
-  else if (license === [1]) {
-    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]"
+  else if (license == "APACHE") {
+    return "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)"
   }
-  else if (license === [2]) {
-    return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]"
+  else if (license == "GNU GPL") {
+    return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)"
   }
-  else if (license === [3]) {
-    return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]"
+  else if (license == "BSD") {
+    return "![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)"
   }
   else {
     return ""
@@ -22,16 +22,16 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === [0]) {
+  if (license == "MIT") {
     return "https://opensource.org/licenses/MIT"
   }
-  else if (license === [1]) {
+  else if (license == "APACHE") {
     return "https://opensource.org/licenses/Apache-2.0"
   }
-  else if (license === [2]) {
+  else if (license == "GNU GPL") {
     return "https://www.gnu.org/licenses/gpl-3.0"
   }
-  else if (license === [3]) {
+  else if (license == "BSD") {
     return "https://opensource.org/licenses/BSD-3-Clause"
   }
   else {
@@ -42,14 +42,17 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license === [0]) {
-    return ""
+  if (license === "MIT") {
+    return "This project is licensed under ${data.license} ${renderLicenseLink(data.license)}."
   }
-  else if (license === [1]) {
-    return ""
+  else if (license === "APACHE") {
+    return "This project is licensed under ${data.license} ${renderLicenseLink(data.license)}."
   }
-  else if (license === [2]) {
-    return ""
+  else if (license === "GNU GPL") {
+    return "This project is licensed under ${data.license} ${renderLicenseLink(data.license)}."
+  }
+  else if (license === "BSD") {
+    return "This project is licensed under ${data.license} ${renderLicenseLink(data.license)}."
   }
   else {
     return ""
@@ -67,10 +70,12 @@ function generateMarkdown(data) {
   
   ## Table of Contents
   
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#license)
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [License](#License)
+  - [Contributing](#Contributing)
+  - [Tests](#Tests)
+  - [Contact](#Contact)
   
   ## Installation
   
@@ -82,12 +87,12 @@ function generateMarkdown(data) {
   
   ## License
 
-  ${renderLicenseBadge(data.license)}
-  This project is licensed under ${renderLicenseLink(data.license)}.
+  ${renderLicenseSection(data.license)}${renderLicenseLink(data.license)}
   
   ## Badges
+  ${renderLicenseBadge(data.license)}
     
-  ## How to Contribute
+  ## Contributing
   
   ${data.contributing}
 

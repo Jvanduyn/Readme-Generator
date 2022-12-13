@@ -58,7 +58,7 @@ const promptUser = () => {
 
 const init = () => {
     promptUser()
-        .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
+        .then((answers) => fs.writeFileSync(answers.title + ".md", generateMarkdown(answers)))
         .then(() => console.log('Successfully wrote to READEME.md'))
         .catch((err) => console.error(err));
 };

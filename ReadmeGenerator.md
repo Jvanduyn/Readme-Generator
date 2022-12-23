@@ -6,7 +6,9 @@
   ## Description
   
   During this project I wanted to be able to use my knowledge for nodejs, in order to be able to create a README file for each of my future projects. This project will prompt the user each section of their read me so that they will not need to follow a template any more. This project will create the file in the repo which they can then add to their project. They will also be able to select a license that they would like to add to their project as well. My motivation for this project was to be able to use some back end skills for a project any user can use for future use. I also wanted an easier way for me to create a read me file quickly and have it structured and licensed properly.
-  
+
+![alt text](./assets/video.mov)
+
   ## Table of Contents
   
   - [Installation](#installation)
